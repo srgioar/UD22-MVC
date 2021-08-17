@@ -32,7 +32,19 @@ public class Modelo {
 		return respuesta;
 	}
 	
-	public void funcionSelect() {
+	public String funcionTestear() {
+		
+		//ConectorSQL.openConnection();
+		
+		String txt = ConectorSQL.testConnection();
+		
+		return txt;
+		
+		//ConectorSQL.closeConnection();
+		
+	}
+	
+	public void funcionLeer() {
 		
 		ConectorSQL.openConnection();
 		
@@ -43,7 +55,7 @@ public class Modelo {
 		
 	}
 
-	public void funcionInsert() {
+	public void funcionInsertar() {
 
 		ConectorSQL.openConnection();
 		
@@ -52,7 +64,7 @@ public class Modelo {
 		ConectorSQL.closeConnection();
 	}
 	
-	public void funcionUpdate() {
+	public void funcionModificar() {
 		
 		ConectorSQL.openConnection();
 		
@@ -62,7 +74,7 @@ public class Modelo {
 		
 	}
 	
-	public void funcionDelete() {
+	public void funcionBorrar() {
 		
 		ConectorSQL.openConnection();
 		

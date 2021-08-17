@@ -18,18 +18,26 @@ public class ConectorSQL {
 	public static Connection conexion;
 	
 	// Método para testear la conexión
-	public static void testConnection() {
+	// Va pasando un string que se aplica al textfield respuesta
+	
+	public static String testConnection() {
+		
+		String msg = "";
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conexion=DriverManager.getConnection("jdbc:mysql://192.168.1.78:3306","remote","Pass_1234");
+			msg = "Conexión exitosa...";
 			conexion.close();
 			
+			
 		}catch(SQLException | ClassNotFoundException ex  ){
-			System.out.print("No se ha podido conectar con mi base de datos");
+			msg = "No se ha podido conectar con mi base de datos";
 			System.out.println(ex.getMessage());
 			
 		}
+		
+		return msg;
 		
 	}
 		

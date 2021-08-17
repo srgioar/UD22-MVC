@@ -4,6 +4,10 @@ import controller.Controlador;
 import model.Modelo;
 import view.Vista;
 
+/**
+ * Hello world!
+ *
+ */
 public class App 
 {
     public static void main( String[] args )
